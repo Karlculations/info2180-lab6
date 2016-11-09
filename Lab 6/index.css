@@ -1,7 +1,7 @@
 html{
 	height: 100%;
 }
-#search{
+#all, #search{
 	color: white;
 	background-color:#3399ff;
 	padding: 5px 5px 5px 5px;

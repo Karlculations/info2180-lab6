@@ -7,12 +7,20 @@ $(document).ready(function(){
             datatype: "html",
             data: {q: $("#lookup").val()},
             success: function(text){
-                //alert(text)
                 $("#result").html(text)
             }
-            /*error: function(XMLHttpsRequest, textStatus, errorText){
-                alert("Status" + )
-            }*/
+        });
+    });
+	
+	$("#all").click(function(){
+        $.ajax({
+            type: "GET",
+            url: "request.php",
+            datatype: "xml",
+            data: {q: "&all=true"},
+            success: function(text){
+				$("#result").html(text)
+            }
         });
     });
 });
